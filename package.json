@@ -1,0 +1,29 @@
+{
+  "name": "id-generator",
+  "version": "0.0.1",
+  "description": "generate unique ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "id-generator": "index.js"
+  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kessler/id-generator"
+  },
+  "keywords": [
+    "id"
+  ],
+  "author": "Yaniv Kessler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kessler/id-generator/issues"
+  },
+  "homepage": "https://github.com/kessler/id-generator",
+  "dependencies": {
+    "node-uuid": "^1.4.1",
+    "minimist": "0.0.8"
+  }
+}
