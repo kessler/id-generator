@@ -3,7 +3,7 @@ var uuid = require('node-uuid')
 var EventEmitter = require('events').EventEmitter
 var util = require('util')
 var argv = require('minimist')(process.argv.slice(2));
-//
+
 module.exports = IdGenerator
 
 var MAX = Math.pow(2, 53)
