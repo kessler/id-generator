@@ -1,6 +1,6 @@
 {
   "name": "id-generator",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "generate unique ids",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "bin": {
     "id-generator": "index.js"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kessler/id-generator"
