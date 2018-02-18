@@ -4,10 +4,6 @@ var assert = require('assert')
 describe('IdGenerator', function () {
 	var generator
 
-	beforeEach(function () {
-		generator = new IdGenerator()
-	})
-
 	it('generates ids', function () {
 		generator.prefix = 'abc'
 
@@ -35,5 +31,16 @@ describe('IdGenerator', function () {
 
 		generator.newId()
 		generator.newId()
+	})
+
+	it('can have an external id prefix generator', function() {
+		var aGenerator = new IdGenerator(function () { return 'foo' })
+
+		assert.strictEqual(aGenerator.newId(), 'foo.1')
+		assert.strictEqual(aGenerator.newId(), 'foo.2')
+	})
+
+	beforeEach(function () {
+		generator = new IdGenerator()
 	})
 })

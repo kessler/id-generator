@@ -13,7 +13,7 @@ By default, when the counter reaches 2^53 it will reset and a new uuid will be g
 ```
 
 ### Usage
-```
+```js
     var Generator = require('id-generator')
     var g = new Generator()
     
@@ -30,7 +30,13 @@ By default, when the counter reaches 2^53 it will reset and a new uuid will be g
     g.on('reset', function(g) {
         console.log(g.prefix) // outputs 4ea9b5d9-e616-45f6-bdf4-11d382062fdc
     })
+
+    // Override uuid prefix with something else
+    var anotherG = new Generator(function () { return 'bar' })
+    console.log(g.newId()) // outputs: bar.1
+    console.log(g.newId()) // outputs: bar.2
 ```
+
 from command line:
 ```
     > id-generator --count=10
