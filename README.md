@@ -1,6 +1,6 @@
 # id-generator
 
-Generates unique ids using uuid and an running number. 
+Generates unique ids using uuid and a running number. 
 
 Useful for enviroments where the cost of generating a new uuid each time is too high or
 when id generation is distributed and one does not want to coordinate uniqueness.
